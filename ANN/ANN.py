@@ -1,15 +1,3 @@
-
-# coding: utf-8
-
-# In[1]:
-
-
-#2#
-
-
-# In[2]:
-
-
 from __future__ import division
 import numpy as np
 import keras
@@ -25,21 +13,12 @@ from keras.utils import plot_model
 from random import shuffle
 
 
-# In[9]:
-
-
-# Printing stuff in console for debugging purposes.
-import sys
 import os
 try:
     os.system("rm log.txt")
     sys.stdout = open("log.txt",'w')
 except:
     sys.stdout = open("log.txt", 'w')
-
-
-# In[4]:
-
 
 # Model architecture is defined here.
 def get_model(feat_shape=200,num_accents=5):
@@ -73,23 +52,11 @@ def get_model(feat_shape=200,num_accents=5):
     model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
     return model
 
-
-# In[5]:
-
-
 num_accents=5
 model = get_model(200,num_accents)
 
-
-# In[6]:
-
-
 plot_model(model,"model.png")
 model.summary()
-
-
-# In[7]:
-
 
 batch_size = 1
 num_epochs = 3
