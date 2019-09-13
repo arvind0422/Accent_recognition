@@ -1,4 +1,4 @@
-# Accent_recognition
+# Accent & Speaker Recognition
 
 Part of major project requirement for my undergraduate degree.
 
